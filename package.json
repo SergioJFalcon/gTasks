@@ -1,0 +1,33 @@
+{
+  "name": "@sergiojfalcon/gtasks",
+  "displayName": "Google Tasks",
+  "version": "0.0.0",
+  "description": "Google Tasks Chrome Extension",
+  "author": "Sergio Falcon",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite build -w",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@suid/icons-material": "^0.6.11",
+    "@suid/material": "^0.15.1",
+    "solid-js": "^1.8.11"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.23",
+    "@types/chrome": "^0.0.260",
+    "@types/node": "^20.11.16",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "solid-collapse": "^1.1.0",
+    "solid-devtools": "^0.29.2",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11",
+    "vite-plugin-solid": "^2.8.2"
+  }
+}

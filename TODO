@@ -1,0 +1,15 @@
+On Focus of a taskItem, if i initially clicked on the menu button, the taskItem will be focused, but the menu will not be opened.
+check a task item
+Show completed tasks
+move task to another list
+delete task
+add a subtask
+change due date
+due date chip color standard
+
+refresh the task list after a task is updated, added, or deleted, or moved to another list
+move functions to background script
+
+add alert for tasks that are due today or overdue
+
+make it prettier

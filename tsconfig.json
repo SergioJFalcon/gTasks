@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": ["vite/client", "node"],
+    "noEmit": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "paths": {
+      "@src/*": [
+        "./src/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+    }
+  },
+  "include": [
+    "src",
+    "utils",
+    "vite.config.ts",
+    "node_modules/@types",
+    "src/manifest.ts"
+  ]
+}
