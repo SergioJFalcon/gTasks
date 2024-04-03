@@ -5,10 +5,11 @@ import RadioButtonUnchecked from '@suid/icons-material/RadioButtonUnchecked';
 
 import CheckCircle from "@suid/icons-material/CheckCircle";
 import CheckCircleOutline from "@suid/icons-material/CheckCircleOutline";
-import { completedTask } from "@src/pages/popup/Popup";
 
 const TaskCheckbox = (props: any) => {
   const [checkboxHovered, setCheckboxHovered] = createSignal(false);
+  // TODO: Add a function to update the task's completed status
+  
   return (
     <div onMouseEnter={() => setCheckboxHovered(true)} onMouseLeave={() => setCheckboxHovered(false)}>
       <Show when={checkboxHovered()} fallback={
@@ -17,7 +18,7 @@ const TaskCheckbox = (props: any) => {
             icon={<RadioButtonUnchecked />}
             checkedIcon={<CheckCircle />}
             onChange={(event, checked) => {
-              completedTask(props.task);
+              console.log('checked: ', event, checked);
             }}
             inputProps={{ "aria-label": "controlled" }}
           />
@@ -27,7 +28,7 @@ const TaskCheckbox = (props: any) => {
           icon={<CheckCircleOutline />}
           checkedIcon={<CheckCircle />}
           onChange={(event, checked) => {
-            completedTask(props.task);
+            console.log('checked: ', event, checked);
           }}
           inputProps={{ "aria-label": "controlled" }}
         />

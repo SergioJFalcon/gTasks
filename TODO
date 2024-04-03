@@ -1,15 +1,15 @@
-On Focus of a taskItem, if i initially clicked on the menu button, the taskItem will be focused, but the menu will not be opened.
-check a task item
-Show completed tasks
-move task to another list
-delete task
-add a subtask
-change due date
-due date chip color standard
-
-refresh the task list after a task is updated, added, or deleted, or moved to another list
-move functions to background script
-
-add alert for tasks that are due today or overdue
-
-make it prettier
+GTasks:
+☐ On Focus of a taskItem, if i initially clicked on the menu button, the taskItem will be focused, but the menu will not be opened.
+☐ check a task item
+☐ Show completed tasks
+☐ move task to another list
+☐ delete task
+☐ add a subtask
+☐ change due date
+☐ due date chip color standard
+☐ refresh the task list after a task is updated, added, or deleted, or moved to another list
+☐ move functions to background script
+☐ create notification for tasks that are due today or overdue
+  ☐ create new chrome storage variable for tasks that check if the task has already been notified to the user today
+  ☐ create a function that checks if the task is due today or overdue, and if it is, and the user has not been notified about it today, then create a notification
+☐ make it prettier

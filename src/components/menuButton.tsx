@@ -14,11 +14,12 @@ import Cloud from "@suid/icons-material/Cloud";
 import Add from "@suid/icons-material/Add";
 import AddTask from "@suid/icons-material/AddTask";
 import ExpandMore from "@suid/icons-material/ExpandMore";
-import { updateList } from "@src/pages/popup/Popup";
+import { updateTaskList } from "@src/pages/background";
+import { UseAuthState } from "@src/context/auth";
 
 const MenuButton = (props: any) => {
+  const activeUser = UseAuthState();
   const [openMenu, setOpenMenu] = createSignal(false);
-  const [activeListName, setActiveListName] = createSignal(props.activeListName);
   const [lists, setLists] = createSignal(props.lists);
   let menuRef: HTMLDivElement;
 
@@ -39,18 +40,18 @@ const MenuButton = (props: any) => {
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'Enter') {
       console.log('event.target: ', (event.target as HTMLInputElement).value);
-      updateList(props.token, props.activeListId, (event.target as HTMLInputElement).value);
+      updateTaskList(activeUser.token, activeUser.activeListId, (event.target as HTMLInputElement).value);
     }
   }
   // TODO - active menu item should be highlighted
   return (
-    <div class="text-lg relative m-2">
-      <input type="text" class="" disabled={false} value={props.activeListName} onKeyDown={handleKeyDown} />
+    <div class="text-lg relative flex justify-between m-2">
+      <input type="text" class="" disabled={false} value={activeUser.activeListTitle} onKeyDown={handleKeyDown} />
       <button onClick={() => setOpenMenu(!openMenu())}>
         <ExpandMore />
       </button>
       <Show when={openMenu()}>
-        <div ref={menuRef} class="absolute top-full left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black z-40">
+        <div ref={menuRef} class="absolute top-full right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black z-40">
           <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             <For each={lists()}>
               {(list: any) => (
