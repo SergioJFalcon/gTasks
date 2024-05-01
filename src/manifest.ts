@@ -14,9 +14,9 @@ const manifest = defineManifest(async () => ({
   description: packageJson.description,
   author: packageJson.author,
   version: `${major}.${minor}.${patch}.${label}`,
-  key: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvxJz240Fp/BmlEhCqxCVbyL646G+Y+GUKNk87IVM1WCpmbUvRr8UUwtI1xKDXQDYS6cYIhpPh3q3OXJB/VJk+gSNLA7iLAp5ygpA/U4jmLmEbRlQfmai6LxUipOce1leOHYOsIbi4fNh7+Twm0NwKSPhlx+3r8uwk6YgKDyEghQAB4b1qAkuxvBbxyX1ezDVVfzrvF5KvqkU0lRhSKCOAlTSS1RE0/o4Etiy+EgqNZz4BsXX6ix42yJOscbI1ZbvLbGgWU6SkCOuX4+1mtzgub7PkbyJhOWTm/3nxJTl+kXQTCZ3viaszsIilOeiWo+Zdcnq2dUWcjCBVSaOWN0JdwIDAQAB",
+  key: process.env.VITE_KEY,
   oauth2: {
-    "client_id": "281339005676-062h52qp39vhdgnuqfa9a12ed2hqcd9h.apps.googleusercontent.com",
+    "client_id": process.env.VITE_OAUTH_CLIENT_ID,
     "scopes": [
       "profile email",
       "https://www.googleapis.com/auth/contacts",
